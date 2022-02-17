@@ -2,6 +2,7 @@ import random
 from creators import Cooker, EspressoCooker, AmericanoCooker, CappuccinoCooker, LatteCooker, CocoaCooker
 from collections import Counter
 
+
 def main():
     menu: 'list[Cooker]' = [EspressoCooker(), AmericanoCooker(), CappuccinoCooker(), LatteCooker(), CocoaCooker()]
     working_hours = 8  # one day
