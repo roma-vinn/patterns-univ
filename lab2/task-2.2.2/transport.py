@@ -1,7 +1,13 @@
+import copy
 from abc import ABC, abstractmethod
 
 
-class Transport(ABC):
+class TransportPrototype(ABC):
+    def clone(self):
+        return copy.deepcopy(self)
+
+
+class Transport(TransportPrototype):
     def __init__(self, cost, usage_cost):
         self._cost = cost
         self._usage_cost = usage_cost

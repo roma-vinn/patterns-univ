@@ -40,5 +40,14 @@ def calc_cost(company: str):
     return sum([transport.cost + n * transport.usage_cost for transport in transport_list])
 
 
+def test_proto():
+    factory: TransportFactory = SkodaFactory()
+    tram = factory.create_tram()
+    tram_clone = tram.clone()
+    print('Same object:', tram == tram_clone)
+    print('Same params:', tram.__dict__ == tram_clone.__dict__)
+
+
 if __name__ == '__main__':
     main()
+    test_proto()
